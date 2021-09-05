@@ -1,5 +1,6 @@
 package com.example.datatransferobjectexample.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +19,13 @@ public class Person {
       @GeneratedValue(strategy = GenerationType.IDENTITY)
       private Long id;
 
+      @Column(name = "person_name")
       private String name;
+
+      @Column(name = "person_email")
       private String email;
+
+      @Column(name = "person_cpf")
       private String cpf;
+
 }
